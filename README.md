@@ -1,6 +1,6 @@
 # Metodologia-Ecológica
 
-Disciplina do Bacharelado em Ciências Biológicas, habilitação Ecologia, do Instituto de Biologia da Universidade Federal do Rio de Janeiro. 
+Disciplina do Bacharelado em Ciências Biológicas, habilitação Ecologia, do Instituto de Biologia da Universidade Federal do Rio de Janeiro. Professor responsável: Marcus Vinícius Vieira (Prof. Associado, Dept. Ecologia, Instituto de Biologia, CCS, UFRJ) 
 
 ### Licença de Uso
 
