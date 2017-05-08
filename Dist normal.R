@@ -23,20 +23,20 @@ sd(medias)
 
 # Sobreposição com curva normal esperada para esta média e desv. padrão (sd)
 xv<-seq(0,10,0.1)
-yv<-dnorm(xv,mean=5, sd=s1.29)*5000
-
+yv<-dnorm(xv,mean=5, sd=1.29)*5000
+plot(xv,yv, type="l", xlab="cm", ylab="Probabilidade")
 lines(xv, yv, type="l")
 
 
 
 ### Curva NORMAL PADRÃO: média 0 e unidades de sd
-nd<-seq(-3,3,0.01)
+nd<-seq(-4,4,0.01)
 y<-dnorm(nd)  # para gerar a probabilidade de cada um dos valores em nd (formalmente, a "densidade de probabilidade", dai o "dnorm")
-plot (nd,y,type="l")
+plot (nd,y,type="l", xlab="Z", ylab="Probabilidade")
 
 # OU
 mean(nd)
-curve(dnorm(x, 0, 1), -3, 3)
+curve(dnorm(x, 0, 1), -4, 4)
 
 # Encontrando as probabilidades cumulativas de valores (em unidades de desvio padrão)
 pnorm(-2)
@@ -53,6 +53,13 @@ pnorm(7.5, mean=5, sd=1.29)
 # Agora fazendo o contrário: tendo o quartil ou percentil, e querendo o valor da observação no quartil
 qnorm(c(0.025,0.975))   # Dois percentis de uma só vez, os limites inferior e superior do Int. Conf. 95%
 
+abline(v=0, lty=1, col="red", lwd=2)  # lty=2: line type = 2 (pontilhado)
+
+abline(v=qnorm(0.025), lty=2, col="green", lwd=2)
+
+abline(v=qnorm(0.975), lty=2, col="green", lwd=2)
+
+
 # O que significam estes valores? Que unidades são esssas? 
 qnorm(c(0.025,0.975), mean=5, sd=1.29)
 
@@ -68,7 +75,7 @@ abline(v=qnorm(0.975, 5, 1.29), lty=2, col="green", lwd=2)
 
 ### Curva normal não-padrão 
 ht<-seq(150,190,0.01)
-plot(ht,dnorm(ht,170,8),type="l",ylab="Probability density",xlab="Height")
+plot(ht,dnorm(ht,170,11.55134),type="l",ylab="Probability density",xlab="Height")
 
 # OU: 
 curve(dnorm(x, 170, 8), 150, 190)
@@ -83,30 +90,41 @@ sd(ht)
 
 pnorm((160 - mean(ht))/sd(ht))
 
-(185 - mean(ht))/sd(ht)
+(180 - mean(ht))/sd(ht)
 
-pnorm((185 - mean(ht))/sd(ht))
+pnorm((180 - mean(ht))/sd(ht))
 
 
 ### Probabilidas cumulativas sob curva normal padrÃ£o
 pnorm(-0.8657008)
-pnorm(0.6493973)
-1-pnorm(0.6493973)
-pnorm(0.6493973)-pnorm(-0.4329315)
+pnorm(0.8657008)
+1-pnorm(0.8657008)
+pnorm(0.8657008)-pnorm(-0.8657008)
 
 ### As mesmas probabilidades sobre a curva normal com media e var da amostra
 
 pnorm(160, mean(ht), sd(ht))
-pnorm(185, mean(ht), sd(ht))
+pnorm(180, mean(ht), sd(ht))
+
+qnorm(0.025)
+qnorm(0.975)
+
+qnorm(0.025)
+qnorm(0.975)
+
+qnorm(0.025, mean(ht), sd(ht))
+qnorm(0.975, mean(ht), sd(ht))
 
 
 ### Relação entre valores esperados da pela distribuição normal e t-studentt para os mesmos dados
 xvs<-seq(-4,4,0.01)  # gerando uma sequencia de dados
-plot(xvs,dnorm(xvs),type="l",lty=2,ylab="Probability density",xlab="Deviates")
+plot(xvs,dnorm(xvs),type="l",lty=2,ylab="Probabilidade",xlab="")
 lines(xvs,dt(xvs,df=1))
 lines(xvs,dt(xvs,df=2))
 lines(xvs,dt(xvs,df=10))
 lines(xvs,dt(xvs,df=20))
+lines(xvs,dt(xvs,df=1000))
+lines(xvs,dt(xvs,df=100))
 
 
 ### Relação entre valor de t e graus de liberdade para o quartil 0.975
