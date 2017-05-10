@@ -1,6 +1,6 @@
 ## O arquivo está em formato 'comma separated values", csv, 
 ## facilmente lido tanto no R como no Excel.
-esponjas <- read.table("Esponjas.txt", header = T)
+esponjas <- read.csv("Esponjas.csv", header = T)
 attach(esponjas)
 esponjas
 
