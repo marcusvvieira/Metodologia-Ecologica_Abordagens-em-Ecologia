@@ -1,3 +1,5 @@
+## Demonstrando o Teorema do Limite Central
+
 runif(100,-10,10)
 mean(runif(10,-10,10))
 hist(runif(100,-10,10))
@@ -20,6 +22,7 @@ sort.unif <- function(quantos, repete, min, max) {
 sort.unif(100, 100, -10, 10)
 
 
+
 normais <- rnorm(100, 2, 4)
 mean(normais)
 sd(normais)
@@ -29,6 +32,8 @@ n <- 100
 x <- rnorm(n)
 mean(x)
 sd(x)
+
+# Calculando o Intervalo de Confiança a média
 
 qt(0.975, n-1)
 mean(x)
@@ -49,4 +54,5 @@ sort.norm <- function(quantos, repete, media, variancia) {
 sort.norm(100, 100, 0, 1)
 
 hist(x,freq=F,ylim=c(0,0.5))
-curve(dnorm(x),add=T)
+curve(dnorm(x), add=T)
+dnorm(x)
