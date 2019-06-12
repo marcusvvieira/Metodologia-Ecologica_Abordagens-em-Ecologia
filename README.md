@@ -1,4 +1,4 @@
-# Metodologia-Ecológica
+# Metodologia Ecológica (graduação IB-UFRJ) / Abordagens e Métodos Estatísticos em Ecologia (pós-graduação PPGE-IB-UFRJ)
 
 Disciplina para alunos de graduação em Ciências Biológicas (Licenciatura e Bacharelado) e alunos de pós-graduação, oferecida no Instituto de Biologia da Universidade Federal do Rio de Janeiro. Professor responsável: Marcus Vinícius Vieira (Prof. Associado, Dept. Ecologia, Instituto de Biologia, CCS, UFRJ). 
 
